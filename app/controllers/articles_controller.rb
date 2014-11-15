@@ -13,12 +13,12 @@ class ArticlesController < ApplicationController
 			articles = Article.where.not(id:likes).first
 		end
 
-			render json: articles
-
-		end
-
+		render json: articles
 
 	end
+
+
+end
 
 
 
