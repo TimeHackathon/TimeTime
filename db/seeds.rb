@@ -19,7 +19,7 @@
 # end
 
 Article.delete_all
-x=0
+x=1
 while x < 10
 	response = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?sort=newest&page=#{x}&api-key=a96b439050b304551ed93ba9a87f929c:1:69763820")
 
@@ -29,7 +29,7 @@ while x < 10
 		else
 			Article.create({
 				headline: article["headline"]["main"],
-				image: "https://www.nytimes.com/#{article['multimedia'][0]['url']}",
+				image: "https://www.nytimes.com/#{article['multimedia'][1]['url']}",
 				blurb: article["snippet"],
 				category: article["news_desk"]
 			})
