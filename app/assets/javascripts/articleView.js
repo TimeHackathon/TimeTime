@@ -1,7 +1,3 @@
-
-
-
-
 var ArticleView = Backbone.View.extend({
 
 	template: _.template($('#image-view').html()),
@@ -12,6 +8,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	render: function(){
+		$('.container').empty()
 		this.$el.html(this.template(this.model));
 		$('.container').append(this.$el);
 	},
