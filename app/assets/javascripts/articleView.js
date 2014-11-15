@@ -11,7 +11,7 @@ var ArticleView = Backbone.View.extend({
 		$('.container').append(this.$el);
 	},
 
-	events {
+	events: {
 		'click .likeArticle' : 'like',
 		'click .dislikeArticle' : 'dislike'
 	},
