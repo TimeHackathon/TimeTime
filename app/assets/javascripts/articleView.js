@@ -5,6 +5,7 @@
 var ArticleView = Backbone.View.extend({
 
 	template: _.template($('#image-view').html()),
+	className:'article',
 
 	initialize: function(){
 		this.render();
@@ -16,8 +17,8 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	events: {
-		'swiperight .likeArticle' : 'like',
-		'swipeleft .dislikeArticle' : 'dislike'
+		'swiperight .article' : 'like',
+		'swipeleft .article' : 'dislike'
 	},
 
 	like: function(){
