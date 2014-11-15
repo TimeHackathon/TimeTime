@@ -12,8 +12,8 @@
 (1..20).each do |fake|
 	article = Article.new
 	article.headline = Faker::Address.city
-	article.blurb = Faker::Lorum.sentences(3).join(' ')
-	article.content = Faker::Lorum.sentences(10).join(' ')
+	article.blurb = Faker::Lorem.sentences(3).join(' ')
+	article.content = Faker::Lorem.sentences(10).join(' ')
 	article.image = "http://placekitten.com/g/300/600"
 	article.save
 end
