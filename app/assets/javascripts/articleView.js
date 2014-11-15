@@ -17,8 +17,8 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	events: {
-		'swiperight .article' : 'like',
-		'swipeleft .article' : 'dislike'
+		'swiperight' : 'like',
+		'swipeleft' : 'dislike'
 	},
 
 	like: function(){
