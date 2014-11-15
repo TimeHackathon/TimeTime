@@ -8,7 +8,7 @@ var ArticleView = Backbone.View.extend({
 
 	render: function(){
 		this.$el.html(this.template());
-		$('container').append(this.$el);
+		$('.container').append(this.$el);
 	},
 
 	events {
@@ -26,7 +26,7 @@ var ArticleView = Backbone.View.extend({
 
 	dislike: function(){
 		$.post('/likes', {liked:false}).done(function(){
-			$.get('/articles').done(function(){
+			$.get('/articles').done(function(response){
 				var articleView = new ArticleView(model: response);
 			})
 		})
