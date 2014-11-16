@@ -8,15 +8,14 @@ class ArticlesController < ApplicationController
 		else
 
 			likes = Like.all.select(:article_id)
-			if(Like.all.length % 5 == 0)
+			articles = Article.where.not(id:likes).first
+			if(articles.id % 5 == 0)
 				articles = Ad.all.sample
-			else
-				articles = Article.where.not(id:likes).first
 			end
+
+			render json: articles
+
 		end
-
-		render json: articles
-
 	end
 
 
