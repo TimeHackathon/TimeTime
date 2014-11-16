@@ -20,6 +20,32 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
+
+.close {
+	color: black;
+}
+
+ul.liked-article {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+ul.liked-article > li {
+	padding-top: 10px;
+}
+ul.liked-article > li > h1 {
+	text-align: center;
+}
+
+li.liked-article {
+	font-family: 'Abel', sans-serif;
+	font-size: 20px
+}
+
+nav > ul > li {
+	font-size: 22px;
+	font-family: 'Abel', sans-serif;
+}
+
 .grid {
 	padding: 20px 20px 100px 20px;
 	max-width: 1300px;
@@ -53,7 +79,7 @@
 	padding: 20px;
 	top: 10px;
 	left: 0;
-	background-color:rgba(171,40,44,1)
+	background-color:rgba(180,39,44,1)
 }
 
 .grid figcaption h3 {
@@ -145,6 +171,15 @@ div.blurb > h3 {
 	color: dark gray;
 	font-family: 'Abel', sans-serif;
 }
+
+div.blurb > h5 {
+	font-size: 15px;
+	text-align: left;
+	text-shadow: none;
+	color: dark gray;
+	font-family: 'Abel', sans-serif;
+}
+
 .articleView {
 	display: none;
 }
@@ -166,10 +201,12 @@ img {
 }
 
 img.logo {
-	width: 250px;
-	height: 70px;
 	padding-bottom: 0px;
 	padding-top: 0px;
+	height: 90px;
+	width: 270px;
+
+
 }
 
 .headline {
