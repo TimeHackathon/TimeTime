@@ -41,18 +41,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
 </head>
 <body>
-	<img class="logo" src="http://oi61.tinypic.com/2aiq5pc.jpg">
-	<nav class="navbar navbar-default" role="navigation">
+
+	<%= render template: "shared/navbar" %>
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+
 
 
 	<%= yield %>

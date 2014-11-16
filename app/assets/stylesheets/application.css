@@ -15,6 +15,10 @@
  */
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 
+.container {
+	background: gray;
+	background-size: 100%
+}
 div.headline > h1 {
 	font-size: 40px;
 	font-family: 'Oswald', sans-serif;
@@ -45,8 +49,10 @@ img {
 }
 
 img.logo {
-	width: 350px;
-	height: 160px;
+	width: 250px;
+	height: 70px;
+	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 .headline {
