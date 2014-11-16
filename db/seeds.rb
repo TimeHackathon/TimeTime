@@ -37,17 +37,19 @@ while x < 10
 	end
 	x+= 1
 end 
-words ="Bicycle rights flexitarian vegan artisan, meh nisi aesthetic cred velit. Meggings single-origin coffee butcher salvia gentrify. Gentrify fingerstache before they sold out, polaroid mustache plaid pop-up. Skateboard tattooed salvia voluptate, Vice vero Kickstarter biodiesel do church-key cornhole tilde master cleanse Echo Park pariatur. Umami adipisicing fugiat, deep v drinking vinegar enim Thundercats skateboard sustainable trust fund aliqua hoodie Cosby sweater before they sold out. Occaecat officia laborum culpa YOLO. Bicycle rights jean shorts Pitchfork quinoa, Kickstarter ethical ad banjo Williamsburg est four loko freegan heirloom.
+how_long = (50..500).to_a
 
-Tattooed nostrud try-hard aliqua. Do deserunt aute raw denim Tonx semiotics. Organic sunt DIY you probably haven't heard of them umami deep v tattooed cupidatat, tempor chambray. Aesthetic gentrify crucifix craft beer, ethical next level ennui DIY lomo irure. Literally messenger bag master cleanse qui. Semiotics meh forage deep v chia yr distillery, et drinking vinegar messenger bag plaid trust fund Neutra aliquip tousled. Pop-up banh mi deserunt brunch single-origin coffee elit.
 
-Ullamco flannel butcher, lomo cliche sunt banjo ethical odio deserunt wolf ea art party. Wolf kale chips Pinterest tempor. Sint cold-pressed hashtag fap Cosby sweater, taxidermy nostrud messenger bag flexitarian aliquip stumptown PBR&B eiusmod you probably haven't heard of them. Cardigan ea deserunt, salvia Shoreditch commodo adipisicing health goth hashtag exercitation. Hashtag Cosby sweater sed, Wes Anderson roof party excepteur velit hella semiotics. Eiusmod roof party occupy put a bird on it Helvetica cillum, lomo ethical magna Pitchfork direct trade banjo. Taxidermy anim literally VHS, sunt paleo chia."
 
 articles = Article.all
 
 articles.each do |article|
-	article.content = words
+	words = Faker::Lorem.sentences(how_long.sample).split('').join(' ')
+	length = words.split(' ').length/250
+	article.content = words 
+	article.read_time = "#{length} minutes"
 	article.save
+
 end 
 
 
