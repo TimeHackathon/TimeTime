@@ -107,7 +107,8 @@ $(function(){
 		$.get('/stats').done(function(data){
 			console.log(data)
 			$('.container').empty();
-			$('.container').append('<div class="col-xs-6 col sm-6 col-md-6 col-lg-6"><h3 class="stat">Likes</h3><canvas id="myChart" width="400" height="400"></canvas></div><div class="min-read col-xs-6 col sm-6 col-md-6 col-lg-6"><h3 class="stat">Minutes Read</h3>' + data.time_read + '</div>');
+			$('.container').append('<div class="col-xs-6 col sm-6 col-md-6 col-lg-6"><h3 class="stat">Likes</h3><canvas id="myChart" width="400" height="400"></canvas></div><div class="min-read col-xs-6 col sm-6 col-md-6 col-lg-6"><h3 class="stat">Minutes Read</h3><span class="timeRead">0</span></div>');
+			countUpTo(data.time_read)
 			var ctx = $('#myChart').get(0).getContext('2d');
 			var myDoughnutChart = new Chart(ctx).Doughnut(data.data, { segmentShowStroke: true, segmentStrokeColor: '#fff', segmentStrokeWidth: 2, percentageInnerCutout: 50, animationSteps: 100, animationEasing: 'easeOutBounce', animateRotate: true})
 		console.log(data.time_read)
