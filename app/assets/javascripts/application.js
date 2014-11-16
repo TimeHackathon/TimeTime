@@ -21,4 +21,5 @@
 //= require articleCollection.js
 //= require articleView.js
 //= require articleListView.js
-//= require charView.js
+// require charView.js
+//= require countupto.js
