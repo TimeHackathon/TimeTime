@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<div class "container">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/template" id="image-view">
 	<div class="headline col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<h1><%%=headline%></h1>
 	</div>
+	<div class="firstView">
 	<div class="image col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<img src=<%%= image %>>
 	</div>
-	<div class="blurb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="blurb col-xs-6 col-sm-6 col-md-6 col-lg-6">
 	<h3><%%=blurb%></h3>
+	</div>
+
+	</div>
+	<div class="articleView">
+	<%%= content %>
 	</div>
 
 
