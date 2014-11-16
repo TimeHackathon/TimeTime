@@ -68,6 +68,7 @@ nav > ul > li {
 
 }
 
+
 @import url(http://fonts.googleapis.com/css?family=Raleway);
  @import url(http://fonts.googleapis.com/css?family=Abel);
  @import url(http://fonts.googleapis.com/css?family=Oswald);
@@ -82,7 +83,12 @@ nav > ul > li {
  	color: black;
  }
 
- .headline > h1 {
+.stat {
+	color: rgba(194,36,37,1);
+	font-family: 'Oswald', sans-serif;
+}
+
+.headline > h1 {
  	color: rgba(194,36,37,1);
 font-family: 'Oswald', sans-serif;
  }
@@ -256,6 +262,10 @@ font-family: franklin-gothic-urw,sans-serif;
  .articleView {
  	display: none;
  }
+
+div.min-read{
+	font-size: 100px;
+}
 
  .content {
  	text-align: justify;
