@@ -30,6 +30,7 @@
 }
 
 
+
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
@@ -52,33 +53,6 @@
  p {
  	font-family: franklin-gothic-urw,sans-serif;
  	font-size: 20px;
- }
- .close {
- 	color: black;
- }
-
- ul.liked-article {
- 	padding-bottom: 30px;
- 	padding-top: 30px;
- }
- ul.liked-article > li {
- 	padding-top: 10px;
- }
- ul.liked-article > li > h1 {
- 	text-align: center;
- 	color: rgba(194,36,37,1);
- 	font-family: 'Oswald', sans-serif;
- }
-
- li.liked-article {
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-size: 20px
- }
-
- nav > ul > li {
- 	font-size: 18px;
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-style: none;
  }
 
  .grid {
