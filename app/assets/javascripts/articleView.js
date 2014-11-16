@@ -19,7 +19,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	like: function(){
-		$.post('/likes', {liked:true}).done(function(){
+		$.post('/likes', {liked:true,article_id:this.model.id}).done(function(){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
@@ -27,7 +27,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	dislike: function(){
-		$.post('/likes', {liked:false}).done(function(){
+		$.post('/likes', {liked:false,article_id:this.model.id}).done(function(){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
