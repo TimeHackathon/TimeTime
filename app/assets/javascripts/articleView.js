@@ -53,8 +53,12 @@ var ArticleView = Backbone.View.extend({
 		}
 	},
 	showArticle:function(){
-		$('.firstView').toggle()
-		$('.articleView').toggle()
+		if(this.model.ad){
+			//do nothing
+		}else{
+			$('.firstView').toggle()
+			$('.articleView').toggle()
+		}
 	}
 })
 
