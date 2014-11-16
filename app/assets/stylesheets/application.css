@@ -20,6 +20,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
+<<<<<<< HEAD
 li.liked-thumbnail {
 	max-width: 220px;
 	max-height: 250px;
@@ -32,6 +33,32 @@ li.liked-thumbnail img {
 }
 li.liked-article {
 	font-size: 16px;
+=======
+
+.close {
+	color: black;
+}
+
+ul.liked-article {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+ul.liked-article > li {
+	padding-top: 10px;
+}
+ul.liked-article > li > h1 {
+	text-align: center;
+}
+
+li.liked-article {
+	font-family: 'Abel', sans-serif;
+	font-size: 20px
+}
+
+nav > ul > li {
+	font-size: 22px;
+	font-family: 'Abel', sans-serif;
+>>>>>>> 36a9d44a5f62dbcf10158a37fff2a347069d932e
 }
 
 .grid {
@@ -67,7 +94,7 @@ li.liked-article {
 	padding: 20px;
 	top: 10px;
 	left: 0;
-	background-color:rgba(171,40,44,1)
+	background-color:rgba(180,39,44,1)
 }
 
 .grid figcaption h3 {
@@ -147,7 +174,7 @@ li.liked-article {
 }
 
 div.headline > h1 {
-	font-size: 50px;
+	/*font-size: 50px;*/
 	font-family: 'Archivo Narrow', sans-serif;
 	padding: -200px;
 	text-shadow: none;
@@ -159,6 +186,15 @@ div.blurb > h3 {
 	color: dark gray;
 	font-family: 'Abel', sans-serif;
 }
+
+div.blurb > h5 {
+	font-size: 15px;
+	text-align: left;
+	text-shadow: none;
+	color: dark gray;
+	font-family: 'Abel', sans-serif;
+}
+
 .articleView {
 	display: none;
 }
@@ -180,10 +216,12 @@ img {
 }
 
 img.logo {
-	width: 250px;
-	height: 70px;
 	padding-bottom: 0px;
 	padding-top: 0px;
+	height: 90px;
+	width: 270px;
+
+
 }
 
 .headline {
