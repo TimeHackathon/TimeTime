@@ -13,9 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 
 div.headline > h1 {
-	font-size: 50px;
+	font-size: 60px;
+	font-family: 'Oswald', sans-serif;
 }
 div.blurb > h3 {
 	font-size: 30px;
@@ -23,11 +25,14 @@ div.blurb > h3 {
 	padding-bottom: 100px
 }
 img {
+	width: 90%;
+	height: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	padding-top: 50px;
 	padding-bottom : 50px;
+	position: relative;
 }
 
 .headline {
