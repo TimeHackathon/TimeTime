@@ -10,7 +10,7 @@
 
 Article.delete_all
 x=1
-while x < 20
+while x < 50
 	if(x % 2 == 0)
 		response = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?sort=newest&page=#{x}&api-key=a96b439050b304551ed93ba9a87f929c:1:69763820")
 
