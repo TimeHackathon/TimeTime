@@ -16,7 +16,6 @@
 // require_tree .
 //= require underscore.js
 //= require backbone.js
-//= require bootstrap.js
 //= require chart.js
 //= require articleModel.js
 //= require articleView.js
