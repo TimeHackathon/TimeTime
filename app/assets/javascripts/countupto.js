@@ -9,8 +9,9 @@ for(var i = 0; i <= number; i++){
 }
 
 function loopTimeout(num){
+
 	setTimeout(function(){
-		console.log(num)
+		$('.timeRead').html(num)
 	},num*50)
 
 }

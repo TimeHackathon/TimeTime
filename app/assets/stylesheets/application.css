@@ -29,55 +29,7 @@
 	opacity: 0.5;
 }
 
-<<<<<<< HEAD
-li.liked-thumbnail {
-	max-width: 220px;
-	max-height: 250px;
-	margin: 10px;
-	overflow: auto;
-}
-li.liked-thumbnail img {
-	padding-bottom: 20px;
 
-}
-li.liked-article {
-	font-size: 16px;
-}
-
-.close {
-	color: black;
-}
-
-ul.liked-article {
-	padding-bottom: 30px;
-	padding-top: 30px;
-}
-ul.liked-article > li {
-	padding-top: 10px;
-}
-ul.liked-article > li > h1 {
-	text-align: center;
-}
-
-li.liked-article {
-	font-family: 'Abel', sans-serif;
-	font-size: 20px
-}
-
-nav > ul > li {
-	font-size: 22px;
-	font-family: 'Abel', sans-serif;
-
-}
-
-
-@import url(http://fonts.googleapis.com/css?family=Raleway);
- @import url(http://fonts.googleapis.com/css?family=Abel);
- @import url(http://fonts.googleapis.com/css?family=Oswald);
- @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-
-=======
->>>>>>> 63a6400d0c0c854f86cc306b4cecea1b1a2b676b
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
