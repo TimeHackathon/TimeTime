@@ -5,6 +5,7 @@ var ArticleView = Backbone.View.extend({
 
 	initialize: function(){
 		this.render();
+		this.counter = 0
 	},
 
 	render: function(){
@@ -20,17 +21,18 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	like: function(){
+		this.counter = this.counter + 1
 		if(this.model.ad){
 			console.log('hey')
-			$.get('/articles').done(function(response){
+			$.get('/articles?count='+this.counter).done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
 		}
 		else{
 
-
+					this.counter = this.counter + 1
 			$.post('/likes', {liked:true,article_id:this.model.id}).done(function(){
-				$.get('/articles').done(function(response){
+				$.get('/articles?count='+this.counter).done(function(response){
 					var articleView = new ArticleView({model:response});
 				})
 			})
@@ -40,13 +42,13 @@ var ArticleView = Backbone.View.extend({
 	dislike: function(){
 		if(this.model.ad){
 			console.log('ok')
-			$.get('/articles').done(function(response){
+			$.get('/articles?count='+this.counter).done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
 		}
 		else{
 			$.post('/likes', {liked:false,article_id:this.model.id}).done(function(){
-				$.get('/articles').done(function(response){
+			$.get('/articles?count='+this.counter).done(function(response){
 					var articleView = new ArticleView({model:response});
 				})
 			})
@@ -65,7 +67,7 @@ var ArticleView = Backbone.View.extend({
 
 
 $(function(){
-	$.get('/articles').done(function(response){
+	$.get('/articles?count=0').done(function(response){
 		console.log(response)
 		articleView = new ArticleView({model:response})
 
