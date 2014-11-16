@@ -73,15 +73,19 @@ var ArticleView = Backbone.View.extend({
 	}
 })
 
-
-
-$(function(){
+function home(){
 	$.get('/articles?count=1').done(function(response){
 		articleView = new ArticleView({model:response})
 	});
+};
+
+$(function(){
+
+	home();
 
 	$('.home').on('click', function(){
 		category = '';
+		home();
 	});
 
 	$('.dropdown-menu').on('click', function(event){
