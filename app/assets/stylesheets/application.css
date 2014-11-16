@@ -159,7 +159,7 @@ nav > ul > li {
 }
 
 div.headline > h1 {
-	font-size: 50px;
+	/*font-size: 50px;*/
 	font-family: 'Archivo Narrow', sans-serif;
 	padding: -200px;
 	text-shadow: none;
@@ -186,6 +186,7 @@ div.blurb > h5 {
 
 .content {
 	text-align: justify;
+	margin-top: -100px;
 }
 
 img {
