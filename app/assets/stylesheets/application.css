@@ -21,6 +21,9 @@
  @import url(http://fonts.googleapis.com/css?family=Oswald);
  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 
+.fa {
+	padding-left: 30px
+}
  .home {
 	cursor: pointer;
 }
@@ -29,7 +32,10 @@
 	opacity: 0.5;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b83e6402f2ffc8bc6b95f4dd1782a313dce77afb
 li.liked-thumbnail {
 	max-width: 220px;
 	max-height: 250px;
@@ -39,9 +45,6 @@ li.liked-thumbnail {
 li.liked-thumbnail img {
 	padding-bottom: 20px;
 
-}
-li.liked-article {
-	font-size: 16px;
 }
 
 .close {
@@ -57,11 +60,14 @@ ul.liked-article > li {
 }
 ul.liked-article > li > h1 {
 	text-align: center;
+	color: rgba(194,36,37,1);
+	font-family: 'Oswald', sans-serif;
 }
 
 li.liked-article {
 	font-family: 'Abel', sans-serif;
 	font-size: 20px
+
 }
 
 nav > ul > li {
@@ -70,7 +76,10 @@ nav > ul > li {
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b83e6402f2ffc8bc6b95f4dd1782a313dce77afb
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
