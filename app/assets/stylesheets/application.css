@@ -133,7 +133,7 @@
 }
 
 div.headline > h1 {
-	font-size: 50px;
+	/*font-size: 50px;*/
 	font-family: 'Archivo Narrow', sans-serif;
 	padding: -200px;
 	text-shadow: none;
