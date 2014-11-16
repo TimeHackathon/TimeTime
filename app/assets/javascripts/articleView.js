@@ -15,7 +15,8 @@ var ArticleView = Backbone.View.extend({
 
 	events: {
 		'swiperight' : 'like',
-		'swipeleft' : 'dislike'
+		'swipeleft' : 'dislike',
+		'click' : 'showArticle'
 	},
 
 	like: function(){
@@ -50,6 +51,10 @@ var ArticleView = Backbone.View.extend({
 				})
 			})
 		}
+	},
+	showArticle:function(){
+		$('.firstView').toggle()
+		$('.articleView').toggle()
 	}
 })
 
