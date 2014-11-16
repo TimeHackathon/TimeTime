@@ -151,6 +151,7 @@ div.blurb > h3 {
 
 .content {
 	text-align: justify;
+	margin-top: -100px;
 }
 
 img {
