@@ -31,6 +31,7 @@ var ArticleListView = Backbone.View.extend({
 
 	articleShow: function(event){
 		var article = this.collection.get(event.target.id);
+		template: _.template($("like-view"))
 		if (this.options.read){
 			this.$el.empty().append('<li><button class="btn btn-sm close">X</button><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
 		} else {
