@@ -21,7 +21,7 @@ var ArticleListView = Backbone.View.extend({
 
 	addToList: function(article){
 
-		this.$el.append('<li class="liked-article liked-thumbnail col-xs-3 col-sm-3 col-md-3 col-lg-3" id="' + article.attributes.id + '"><img src="'+ article.attributes.image  +'">' + article.attributes.headline + '</li>');
+		this.$el.append('<li class="liked-article liked-thumbnail col-xs-3 col-sm-3 col-md-3 col-lg-3" id="' + article.attributes.id + '"><img id="' + article.attributes.id + '" src="'+ article.attributes.image  +'">' + article.attributes.headline + '</li>');
 	},
 
 	render: function(){
