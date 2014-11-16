@@ -1,7 +1,3 @@
-
-
-
-
 var ArticleView = Backbone.View.extend({
 
 	template: _.template($('#image-view').html()),
@@ -12,17 +8,18 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	render: function(){
+		$('.container').empty()
 		this.$el.html(this.template(this.model));
 		$('.container').append(this.$el);
 	},
 
 	events: {
-		'swiperight .article' : 'like',
-		'swipeleft .article' : 'dislike'
+		'swiperight' : 'like',
+		'swipeleft' : 'dislike'
 	},
 
 	like: function(){
-		$.post('/likes', {liked:true}).done(function(){
+		$.post('/likes', {liked:true,article_id:this.model.id}).done(function(){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
@@ -30,7 +27,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	dislike: function(){
-		$.post('/likes', {liked:false}).done(function(){
+		$.post('/likes', {liked:false,article_id:this.model.id}).done(function(){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
