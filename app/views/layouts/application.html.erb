@@ -3,26 +3,31 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/template" id="image-view">
-	<div class="headline col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<h1><%%=headline%></h1>
-	</div>
-	<div class="firstView">
-	<div class="image col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<img src=<%%= image %>>
-	</div>
-	<div class="blurb col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
-	<h3><%%=blurb%></h3>
-	</div>
+		<div class="headline col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h1><%%=headline%></h1>
+		</div>
+		<ul class="grid cs-style-4">
+			<li>
+				<figure>
+					<div class="firstView">
+						<div class="image col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<img src=<%%= image %>>
+						</div>
+						<figcaption> 
+							<div class="blurb">
+								<h3><%%=blurb%></h3>
+							</div>
+						</figcaption>
+					</div>
+				</figure>
+			</li>
+		</ul>
 
-	</div>
-	<div class="articleView">
-	<div class="content col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-
-	<%%= content %>
-	</div>
-	</div>
-
-
+		<div class="articleView">
+			<div class="content col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+				<%%= content %>
+			</div>
+		</div>
 	</script>
 
 	<title>Timehack</title>
@@ -34,23 +39,22 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+	<script src="assets/modernizr.custom.js"></script>
+
 </head>
 <body>
 
 	<%= render template: "shared/navbar" %>
-  <div class="container-fluid">
-
-
-
-	<%= yield %>
-
-</body>
+	<div class="container-fluid">
+		<%= yield %>
+		<script src="assets/toucheffects.js"></script>
+	</body>
 </div>
 </html>
