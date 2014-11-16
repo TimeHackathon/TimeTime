@@ -105,11 +105,13 @@ $(function(){
 
 	$('.stats').on('click', function(){
 		$.get('/stats').done(function(data){
+			console.log(data)
 			$('.container').empty();
 			$('.container').append('<canvas id="myChart" width="400" height="400"></canvas>');
 			var ctx = $('#myChart').get(0).getContext('2d');
+			console.log(ctx)
 			var myDoughnutChart = new Chart(ctx).Doughnut(data, { segmentShowStroke: true, segmentStrokeColor: '#fff', segmentStrokeWidth: 2, percentageInnerCutout: 50, animationSteps: 100, animationEasing: 'easeOutBounce', animateRotate: true})
-			
+			console.log(myDoughnutChart)
 		})
 	})
 })
