@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<div class "container">
 	<script type="text/template" id="image-view">
 
-	<div class="image col-xs-10 col-sm-10 col-md-10 col-lg-10">
-<img src=<%%= image %>>
+	<div class="headline col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-</div>
-<div class="blurb">
-<%%=blurb%>
+	<h1><%%=headline%></h1>
 	</div>
+	<div class="image col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<img src=<%%= image %>>
 
-	<div class="headline">
-
-	<%%=headline%>
-</div>
+	</div>
+	<div class="blurb col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<h3><%%=blurb%></h3>
+	</div>
 
 
 </script>
@@ -39,4 +39,5 @@
 	<%= yield %>
 
 </body>
+</div>
 </html>
