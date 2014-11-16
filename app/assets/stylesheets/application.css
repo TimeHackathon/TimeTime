@@ -76,6 +76,11 @@ nav > ul > li {
 	font-family: 'Abel', sans-serif;
 
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f52ad0b7ea6e15e91d8a40c94f32c3c70ac39648
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
@@ -98,33 +103,6 @@ nav > ul > li {
  p {
  	font-family: franklin-gothic-urw,sans-serif;
  	font-size: 20px;
- }
- .close {
- 	color: black;
- }
-
- ul.liked-article {
- 	padding-bottom: 30px;
- 	padding-top: 30px;
- }
- ul.liked-article > li {
- 	padding-top: 10px;
- }
- ul.liked-article > li > h1 {
- 	text-align: center;
- 	color: rgba(194,36,37,1);
- 	font-family: 'Oswald', sans-serif;
- }
-
- li.liked-article {
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-size: 20px
- }
-
- nav > ul > li {
- 	font-size: 18px;
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-style: none;
  }
 
  .grid {
