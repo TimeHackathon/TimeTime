@@ -21,7 +21,7 @@ var ArticleListView = Backbone.View.extend({
 
 	addToList: function(article){
 
-		this.$el.append('<li class="liked-article" id="' + article.attributes.id + '">' + article.attributes.headline + '</li>');
+		this.$el.append('<li class="liked-article liked-thumbnail col-xs-3 col-sm-3 col-md-3 col-lg-3"> <img src='+ article.attributes.image  +'> id="' + article.attributes.id + '">' + article.attributes.headline + '</li>');
 	},
 
 	render: function(){
@@ -31,7 +31,6 @@ var ArticleListView = Backbone.View.extend({
 
 	articleShow: function(event){
 		var article = this.collection.get(event.target.id);
-		template: _.template($("like-view"))
 		if (this.options.read){
 			this.$el.empty().append('<li><button class="btn btn-sm close">X</button><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
 		} else {

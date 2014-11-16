@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116012615) do
+ActiveRecord::Schema.define(version: 20141116084242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20141116012615) do
     t.text   "content"
     t.text   "image"
     t.string "category"
+    t.string "read_time"
   end
 
   create_table "likes", force: true do |t|

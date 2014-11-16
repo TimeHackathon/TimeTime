@@ -20,6 +20,20 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
+li.liked-thumbnail {
+	max-width: 220px;
+	max-height: 250px;
+	margin: 10px;
+	overflow: auto;
+}
+li.liked-thumbnail img {
+	padding-bottom: 20px;
+
+}
+li.liked-article {
+	font-size: 16px;
+}
+
 .grid {
 	padding: 20px 20px 100px 20px;
 	max-width: 1300px;
