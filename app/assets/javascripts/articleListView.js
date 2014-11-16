@@ -1,11 +1,10 @@
-articleShow = false;
-
 var ArticleListView = Backbone.View.extend({
 	tagName: 'ul',
 	className: 'liked-article',
 
 	events: {
-		'click li.liked-article' : 'articleShow'
+		'click li.liked-article' : 'articleShow',
+		'click button.close' : 'listShow'
 	},
 
 	initialize: function(options){
@@ -30,18 +29,16 @@ var ArticleListView = Backbone.View.extend({
 	},
 
 	articleShow: function(event){
-		if (articleShow == false){
-			var article = this.collection.get(event.target.id);
-			if (this.options.read){
-				this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
-			} else {
-				this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p><button class="btn btn-sm mark-read">Mark As Read</button></li>');
-			}
-			articleShow = true;
+		var article = this.collection.get(event.target.id);
+		if (this.options.read){
+			this.$el.empty().append('<li><button class="btn btn-sm close">X</button><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
 		} else {
-			$('.likes').trigger('click');
-			articleShow = false;
+			this.$el.empty().append('<li id="' + article.attributes.id + '"><h1>' + article.attributes.headline + '<button class="btn btn-sm close">X</button></h1><p>' + article.attributes.content + '</p><button class="btn btn-sm mark-read">Mark As Read</button></li>');
 		}
+	},
+	
+	listShow: function(){
+		$('.likes').trigger('click');
 	}
 });
 
@@ -49,11 +46,15 @@ $(function(){
 	$('.likes').on('click', function(){
 		var likesCollection = new ArticleCollection();
 		var likes = new ArticleListView({collection: likesCollection, liked: true});
-	})
+	});
 
 	$('.read').on('click', function(){
 		var likesCollection = new ArticleCollection();
 		var likes = new ArticleListView({collection: likesCollection, read: true});
-	})
+	});
+
+	$('.mark-read').on('click', function(event){
+		console.log($(event.target).parent().prop('id'));
+	});
 
 });
