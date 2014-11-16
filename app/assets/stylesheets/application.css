@@ -17,24 +17,42 @@
  *= require_self.
  */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans);
 @import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 
-<<<<<<< HEAD
-li.liked-thumbnail {
-	max-width: 220px;
-	max-height: 250px;
-	margin: 10px;
-	overflow: auto;
-}
-li.liked-thumbnail img {
+
+li.liked-article img {
 	padding-bottom: 20px;
 
 }
 li.liked-article {
 	font-size: 16px;
-=======
+	max-width: 220px;
+	max-height: 250px;
+	margin: 10px;
+	overflow: auto;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 20px
+}
 
+.content {
+	font-family: 'Fira Sans', sans-serif;
+	text-shadow: none;
+	font-size: 20px;
+	padding-bottom: 50px;
+	text-align: left;
+	color: black;
+}
+
+.headline > h1 {
+	color: rgba(194,36,37,1);
+font-family: 'Fira Sans', sans-serif;}
+
+p {
+font-family: 'Fira Sans', sans-serif;
+	font-size: 20px;
+}
 .close {
 	color: black;
 }
@@ -50,15 +68,10 @@ ul.liked-article > li > h1 {
 	text-align: center;
 }
 
-li.liked-article {
-	font-family: 'Abel', sans-serif;
-	font-size: 20px
-}
 
 nav > ul > li {
 	font-size: 22px;
-	font-family: 'Abel', sans-serif;
->>>>>>> 36a9d44a5f62dbcf10158a37fff2a347069d932e
+font-family: 'Fira Sans', sans-serif;
 }
 
 .grid {
@@ -94,7 +107,7 @@ nav > ul > li {
 	padding: 20px;
 	top: 10px;
 	left: 0;
-	background-color:rgba(180,39,44,1)
+	background-color:rgba(194,36,37,1)
 }
 
 .grid figcaption h3 {
@@ -175,7 +188,7 @@ nav > ul > li {
 
 div.headline > h1 {
 	/*font-size: 50px;*/
-	font-family: 'Archivo Narrow', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	padding: -200px;
 	text-shadow: none;
 }
@@ -184,15 +197,15 @@ div.blurb > h3 {
 	text-align: left;
 	text-shadow: none;
 	color: dark gray;
-	font-family: 'Abel', sans-serif;
+	font-family: 'Oswald', sans-serif;
 }
 
 div.blurb > h5 {
 	font-size: 15px;
 	text-align: left;
 	text-shadow: none;
-	color: dark gray;
-	font-family: 'Abel', sans-serif;
+	color: white;
+	font-family: 'Oswald', sans-serif;
 }
 
 .articleView {
