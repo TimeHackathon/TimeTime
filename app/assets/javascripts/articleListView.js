@@ -54,7 +54,7 @@ $(function(){
 	});
 
 	$('.mark-read').on('click', function(event){
-		console.log($(event.target).parent().prop('id'));
+		$.ajax({url: '/likes', type: 'PUT', data: { article_id: $(event.target).parent().prop('id') } });
 	});
 
 });
