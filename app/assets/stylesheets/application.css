@@ -47,9 +47,6 @@ li.liked-thumbnail img {
 	padding-bottom: 20px;
 
 }
-li.liked-article {
-	font-size: 16px;
-}
 
 .close {
 	color: black;
@@ -76,11 +73,7 @@ nav > ul > li {
 	font-family: 'Abel', sans-serif;
 
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> f52ad0b7ea6e15e91d8a40c94f32c3c70ac39648
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
