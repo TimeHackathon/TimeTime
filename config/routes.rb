@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post '/likes' => 'likes#create'
+  put '/likes/:article_id' => 'likes#update'
   get '/articles' => 'articles#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

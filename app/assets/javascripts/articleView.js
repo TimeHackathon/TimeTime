@@ -15,6 +15,9 @@ var ArticleView = Backbone.View.extend({
 		$('.container').empty()
 		this.$el.html(this.template(this.model));
 		$('.container').append(this.$el);
+		setTimeout(function(){
+			$('figure').addClass('cs-hover')
+		},1000)
 	},
 
 	events: {
@@ -73,15 +76,19 @@ var ArticleView = Backbone.View.extend({
 	}
 })
 
-
-
-$(function(){
+function home(){
 	$.get('/articles?count=1').done(function(response){
 		articleView = new ArticleView({model:response})
 	});
+};
+
+$(function(){
+
+	home();
 
 	$('.home').on('click', function(){
 		category = '';
+		home();
 	});
 
 	$('.dropdown-menu').on('click', function(event){
