@@ -18,7 +18,8 @@ class ArticlesController < ApplicationController
 				articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Foreign", "National", "Metro").first
 			elsif(params[:category]=='business')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ?', "SundayBusiness", "Business").first
-
+			end
+			
 
 		elsif(params[:liked])
 			likes = Like.where(liked:true).select(:article_id)
