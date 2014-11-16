@@ -22,7 +22,7 @@ var ArticleListView = Backbone.View.extend({
 	addToList: function(article){
 
 
-		this.$el.append('<li class="liked-article liked-thumbnail col-xs-3 col-sm-3 col-md-3 col-lg-3" id="' + article.attributes.id + '"><img id="' + article.attributes.id + '" src="'+ article.attributes.image  +'">' + article.attributes.headline + '</li>');
+		this.$el.append('<li class="liked-article col-xs-3 col-sm-3 col-md-3 col-lg-3" id="' + article.attributes.id + '"><img class="liked-thumbnail" id="' + article.attributes.id + '" src="'+ article.attributes.image  +'">' + article.attributes.headline + '</li>');
 	},
 
 	render: function(){
@@ -35,7 +35,7 @@ var ArticleListView = Backbone.View.extend({
 		if (this.options.read){
 			this.$el.empty().append('<li><button class="btn btn-sm close">X</button><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
 		} else {
-			this.$el.empty().append('<li id="' + article.attributes.id + '"><h1>' + article.attributes.headline + '<button class="btn btn-sm close">X</button></h1><p>' + article.attributes.content + '</p><div class="bottom col-lg-offset-5"><button class="btn btn-md mark-read"> Read It</button><i class="fa fa-2x fa-facebook-square"></i><i class="fa fa-2x fa-twitter-square"></i></div></li>');
+			this.$el.empty().append('<li><h1>' + article.attributes.headline + '<button class="btn btn-sm close">X</button></h1><p>' + article.attributes.content + '</p><div class="bottom col-lg-offset-5"><button id="' + article.attributes.id + '" class="btn btn-md mark-read"> Read It</button><i class="fa fa-2x fa-facebook-square"></i><i class="fa fa-2x fa-twitter-square"></i></div></li>');
 		}
 	},
 	
@@ -44,7 +44,7 @@ var ArticleListView = Backbone.View.extend({
 	},
 
 	markRead: function(event){
-		$.ajax({url: '/likes/' + $(event.target).parent().prop('id'), type: 'PUT'});
+		$.ajax({url: '/likes/' + $(event.target).prop('id'), type: 'PUT'});
 		$('.likes').trigger('click');
 	}
 });

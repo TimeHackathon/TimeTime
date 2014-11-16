@@ -14,15 +14,17 @@
 	opacity: 0.5;
 }
 
-li.liked-thumbnail {
+img.liked-thumbnail {
 	max-width: 220px;
-	max-height: 250px;
-	margin: 10px;
 	overflow: auto;
-}
-li.liked-thumbnail img {
 	padding-bottom: 20px;
 
+}
+
+li.liked-article {
+	height: 250px;
+	font-size: 16px;
+	margin: 20px;
 }
 
 .close {
@@ -36,6 +38,7 @@ ul.liked-article {
 ul.liked-article > li {
 	padding-top: 10px;
 }
+
 ul.liked-article > li > h1 {
 	text-align: center;
 	color: rgba(194,36,37,1);
