@@ -3,22 +3,23 @@ class ArticlesController < ApplicationController
 	def index
 
 		if(params[:category])
+			puts params
 			likes = Like.all.select(:article_id)
 			if(params[:category]=='art')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Arts&Leisure", "Culture", "Society").first
 			elsif(params[:category]=='style')
-				articles = Article.where.not(id:likes).where(category:'Styles')
+				articles = Article.where.not(id:likes).where(category:'Styles').first
+				puts articles
 			elsif(params[:category]=='sports')
-				articles = Article.where.not(id:likes).where(category:'Sports')
+				articles = Article.where.not(id:likes).where(category:'Sports').first
 			elsif(params[:category]=='opinion')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Editorial", "OpEd", "Letters").first
 			elsif(params[:category]=='news')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Foreign", "National", "Metro").first
 			elsif(params[:category]=='business')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ?', "SundayBusiness", "Business").first
-			elsif(params[:category]=='opionion')
-				articles = Article.where.not(id:likes).where('category = ? OR category= ?', "Automobiles", "RealEstate").first
 			end
+			
 
 		elsif(params[:liked])
 			likes = Like.where(liked:true).select(:article_id)
@@ -36,6 +37,7 @@ class ArticlesController < ApplicationController
 
 
 		end
+
 		render json: articles
 	end
 
