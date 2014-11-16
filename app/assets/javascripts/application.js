@@ -21,5 +21,3 @@
 //= require articleCollection.js
 //= require articleView.js
 //= require articleListView.js
-
-
