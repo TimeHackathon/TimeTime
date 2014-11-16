@@ -19,6 +19,11 @@ class ArticlesController < ApplicationController
 			elsif(params[:category]=='business')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ?', "SundayBusiness", "Business").first
 			end
+		puts articles.blank?
+			if articles.blank?
+				articles = {headline:'No Current Articles In This Category', blurb:'Sorry but there is currently no content in this category', content:'Sorry', image:''}
+		
+			end
 
 
 		elsif(params[:liked])
@@ -112,10 +117,10 @@ class ArticlesController < ApplicationController
 
 			articles = Article.where(id:likes).where(category:'Styles')
 			data[:data].push({label:'Style', color:'#222', highlight:'#AF2C29',value:articles.length})
-	
+
 			articles = Article.where(id:likes).where(category:'Sports')
 			data[:data].push({label:'Sports',color:'#333', highlight:'#AF2C29',value:articles.length})
-	
+
 
 			articles = Article.where(id:likes).where('category = ? OR category= ? OR category =?', "Editorial", "OpEd", "Letters")
 			data[:data].push({label:'Opinion',color:'#444',highlight:'#AF2C29', value:articles.length})
@@ -134,8 +139,8 @@ class ArticlesController < ApplicationController
 				data[:time_read] = data[:time_read]+article.read_time.to_i
 			end
 			puts total_time_read
-	
-	
+
+
 			render json: data
 
 		end
