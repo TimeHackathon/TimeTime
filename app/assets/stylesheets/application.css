@@ -10,23 +10,32 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ * require_tree .
+
+ * require bootstrap.min.css
+
+ *= require_self.
  */
+
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 
-.container {
-	background-image: url(http://wallpaperswide.com/pixel_art_pattern_gray-wallpapers.html);
+div.container-fluid {
+	background-image: url("http://2.bp.blogspot.com/_JS2Sq0DeXaY/SMx_vgeVhmI/AAAAAAAAAHo/sZ-wz-2uu6c/s400/2.5.jpg");
+	background-size: cover;
 }
 div.headline > h1 {
 	font-size: 40px;
 	font-family: 'Oswald', sans-serif;
 	padding: -200px;
+	color: #CCCCCC;
+	text-shadow: none;
 }
 div.blurb > h3 {
 	font-size: 30px;
 	text-align: center;
-	padding-bottom: 100px
+	padding-bottom: 100px;
+	color: #CCCCCC;
+	text-shadow: none;
 }
 .articleView {
 	display: none;
