@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
 	def index
-		puts params
+
 		if(params[:category])
 			likes = Like.all.select(:article_id)
 			if(params[:category]=='art')
@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 			elsif(params[:category]=='opionion')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ?', "Automobiles", "RealEstate").first
 			end
-			end
+
 		elsif(params[:liked])
 			likes = Like.where(liked:true).select(:article_id)
 			articles = Article.where(id:likes)
@@ -39,8 +39,9 @@ class ArticlesController < ApplicationController
 		render json: articles
 	end
 
-
 end
+
+
 
 
 
