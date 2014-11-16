@@ -20,7 +20,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
-<<<<<<< HEAD
+
 li.liked-thumbnail {
 	max-width: 220px;
 	max-height: 250px;
@@ -33,7 +33,7 @@ li.liked-thumbnail img {
 }
 li.liked-article {
 	font-size: 16px;
-=======
+}
 
 .close {
 	color: black;
@@ -58,7 +58,7 @@ li.liked-article {
 nav > ul > li {
 	font-size: 22px;
 	font-family: 'Abel', sans-serif;
->>>>>>> 36a9d44a5f62dbcf10158a37fff2a347069d932e
+
 }
 
 .grid {
