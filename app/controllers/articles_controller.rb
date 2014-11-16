@@ -103,6 +103,31 @@ class ArticlesController < ApplicationController
 			render json: articles
 		end
 
+		def stats
+			data = []
+			likes = Like.where(liked:true).select(:article_id)
+
+			articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Arts&Leisure", "Culture", "Society")
+			data.push({label:'Art', value:articles.length})
+
+			articles = Article.where.not(id:likes).where(category:'Styles')
+			data.push({label:'Style', value:articles.length})
+	
+			articles = Article.where.not(id:likes).where(category:'Sports')
+			data.push({label:'Sports', value:articles.length})
+	
+
+			articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Editorial", "OpEd", "Letters")
+			data.push({label:'Opinion', value:articles.length})
+
+			articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Foreign", "National", "Metro")
+			data.push({label:'News', value:articles.length})
+
+			articles = Article.where.not(id:likes).where('category = ? OR category= ?', "SundayBusiness", "Business")
+			data.push({label:'Business', value:articles.length})
+			render json: data
+		end
+
 
 
 	end
