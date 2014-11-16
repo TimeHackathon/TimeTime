@@ -8,8 +8,6 @@
 
 
 
-
-
 Article.delete_all
 x=1
 while x < 20
@@ -45,6 +43,8 @@ articles.each do |article|
 	article.save
 
 end 
+
+Like.delete_all
 
 
 
