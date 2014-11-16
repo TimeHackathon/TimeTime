@@ -9,6 +9,7 @@ var ArticleListView = Backbone.View.extend({
 	},
 
 	initialize: function(options){
+		this.options = options;
 		this.listenTo(this.collection, 'add', this.addToList);
 		if (options.liked){
 			this.collection.fetch({data:{liked: true}})
@@ -31,7 +32,11 @@ var ArticleListView = Backbone.View.extend({
 	articleShow: function(event){
 		if (articleShow == false){
 			var article = this.collection.get(event.target.id);
-			this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
+			if (this.options.read){
+				this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
+			} else {
+				this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p><button class="btn btn-sm mark-read">Mark As Read</button></li>');
+			}
 			articleShow = true;
 		} else {
 			$('.likes').trigger('click');
@@ -45,4 +50,10 @@ $(function(){
 		var likesCollection = new ArticleCollection();
 		var likes = new ArticleListView({collection: likesCollection, liked: true});
 	})
+
+	$('.read').on('click', function(){
+		var likesCollection = new ArticleCollection();
+		var likes = new ArticleListView({collection: likesCollection, read: true});
+	})
+
 });
