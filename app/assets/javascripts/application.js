@@ -18,6 +18,8 @@
 //= require backbone.js
 //= require chart.js
 //= require articleModel.js
+//= require articleCollection.js
 //= require articleView.js
+//= require articleListView.js
 
 
