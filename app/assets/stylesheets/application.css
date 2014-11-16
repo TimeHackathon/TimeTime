@@ -21,6 +21,14 @@
  @import url(http://fonts.googleapis.com/css?family=Oswald);
  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 
+ .home {
+	cursor: pointer;
+}
+
+.home:hover {
+	opacity: 0.5;
+}
+
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
