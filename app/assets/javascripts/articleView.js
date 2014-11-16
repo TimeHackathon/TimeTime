@@ -1,4 +1,6 @@
-counter = 1
+counter = 1;
+category = '';
+
 var ArticleView = Backbone.View.extend({
 
 	template: _.template($('#image-view').html()),
@@ -43,16 +45,21 @@ var ArticleView = Backbone.View.extend({
 			counter = counter + 1
 			console.log(counter)
 		if(this.model.ad){
-			console.log('ok')
 			$.get('/articles?count='+counter).done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
 		}
 		else{
 			$.post('/likes', {liked:false,article_id:this.model.id}).done(function(){
-			$.get('/articles?count='+counter).done(function(response){
-					var articleView = new ArticleView({model:response});
-				})
+				if (category.length > 0) {
+					$.get('/articles?count='+ counter + '&category=' + category).done(function(response){
+							var articleView = new ArticleView({model:response});
+						})
+				} else {
+					$.get('/articles?count='+counter).done(function(response){
+						var articleView = new ArticleView({model:response});
+					})
+				}
 			})
 		}
 	},
@@ -72,7 +79,15 @@ $(function(){
 	$.get('/articles?count=1').done(function(response){
 		console.log(response)
 		articleView = new ArticleView({model:response})
+	});
 
+	$('.home').on('click', function(){
+		category = '';
+	});
+
+	$('.dropdown-menu').on('click', function(event){
+        var text = $(event.target).text();
+		category = text.split(' ')[0].toLowerCase();
 	})
 })
 
