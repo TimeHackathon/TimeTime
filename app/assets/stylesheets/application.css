@@ -18,7 +18,7 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
-
+@import url(http://fonts.googleapis.com/css?family=Abel);
 
 .grid {
 	padding: 20px 20px 100px 20px;
@@ -53,7 +53,7 @@
 	padding: 20px;
 	top: 10px;
 	left: 0;
-	background-color:rgba(45,46,45,0.6)
+	background-color:rgba(171,40,44,1)
 }
 
 .grid figcaption h3 {
@@ -62,8 +62,6 @@
 	color: black;
 
 }
-
-
 
 /* Caption Style 4 */
 .cs-style-4 li {
@@ -141,9 +139,11 @@ div.headline > h1 {
 	text-shadow: none;
 }
 div.blurb > h3 {
-	font-size: 15px;
+	font-size: 20px;
 	text-align: left;
 	text-shadow: none;
+	color: dark gray;
+	font-family: 'Abel', sans-serif;
 }
 .articleView {
 	display: none;
