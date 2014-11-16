@@ -45,7 +45,7 @@ articles = Article.all
 
 articles.each do |article|
 	words = Faker::Lorem.sentences(how_long.sample).split('').join(' ')
-	length = words.split(' ').length/250
+	length = words.split(' ').length/200
 	article.content = words 
 	article.read_time = "#{length} minutes"
 	article.save
