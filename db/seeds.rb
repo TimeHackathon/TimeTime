@@ -44,6 +44,8 @@ articles.each do |article|
 
 end 
 
+Like.delete_all
+
 
 
 
