@@ -1,12 +1,17 @@
+articleShow = false;
+
 var ArticleListView = Backbone.View.extend({
 	tagName: 'ul',
 	className: 'liked-article',
+
+	events: {
+		'click li.liked-article' : 'articleShow'
+	},
 
 	initialize: function(options){
 		this.listenTo(this.collection, 'add', this.addToList);
 		if (options.liked){
 			this.collection.fetch({data:{liked: true}})
-			console.log(this.collection)
 		} else {
 			this.collection.fetch();
 		}
@@ -15,12 +20,23 @@ var ArticleListView = Backbone.View.extend({
 
 	addToList: function(article){
 
-		this.$el.append('<li class="liked-article">' + article.attributes.headline + '</li>');
+		this.$el.append('<li class="liked-article" id="' + article.attributes.id + '">' + article.attributes.headline + '</li>');
 	},
 
 	render: function(){
 		$('.container').empty();
 		$('.container').append(this.$el);
+	},
+
+	articleShow: function(event){
+		if (articleShow == false){
+			var article = this.collection.get(event.target.id);
+			this.$el.empty().append('<li class="liked-article"><h1>' + article.attributes.headline + '</h1><p>' + article.attributes.content + '</p></li>');
+			articleShow = true;
+		} else {
+			$('.likes').trigger('click');
+			articleShow = false;
+		}
 	}
 });
 
