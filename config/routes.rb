@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   put '/likes/:article_id' => 'likes#update'
   get '/articles' => 'articles#index'
 
-  get '/graphs' => 'articles#graph'
+  get '/stats' => 'articles#stats'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
