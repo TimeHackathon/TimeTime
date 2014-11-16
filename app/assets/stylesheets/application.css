@@ -44,6 +44,11 @@ img {
 	position: relative;
 }
 
+img.logo {
+	width: 350px;
+	height: 160px;
+}
+
 .headline {
 	text-align: center;
 	padding-top: 30px
