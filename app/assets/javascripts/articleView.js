@@ -13,6 +13,9 @@ var ArticleView = Backbone.View.extend({
 
 	render: function(){
 		$('.container').empty()
+		if(this.model.blurb.split(' ').length > 20){
+			this.model.blurb = this.model.blurb.split(' ').slice(0,20).join(' ')+'...'
+		}
 		this.$el.html(this.template(this.model));
 		$('.container').append(this.$el);
 		setTimeout(function(){
