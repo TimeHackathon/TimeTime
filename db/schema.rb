@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115211951) do
+ActiveRecord::Schema.define(version: 20141116002245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ads", force: true do |t|
+    t.text    "image"
+    t.string  "headline"
+    t.text    "blurb"
+    t.boolean "ad"
+  end
 
   create_table "articles", force: true do |t|
     t.string "headline"
