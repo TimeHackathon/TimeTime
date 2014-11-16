@@ -21,14 +21,6 @@
  @import url(http://fonts.googleapis.com/css?family=Oswald);
  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 
-.fa {
-	padding-left: 30px;
-}
-
-.bottom {
-	padding-top: 30px
-
-}
  .home {
 	cursor: pointer;
 }
@@ -78,12 +70,9 @@ nav > ul > li {
 	font-family: 'Abel', sans-serif;
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 33b14877018376ef9f5dde75d37ee51e458762b1
-
 
 >>>>>>> f52ad0b7ea6e15e91d8a40c94f32c3c70ac39648
+
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
