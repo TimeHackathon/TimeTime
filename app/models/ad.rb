@@ -3,5 +3,6 @@ class Ad < ActiveRecord::Base
 	def default_values
 		self.ad ||= true
 		self.headline ||= 'Sponsored Content'
+		self.content ||= ''
 	end
 end
