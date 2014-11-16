@@ -16,7 +16,7 @@
 						<figcaption> 
 							<div class="blurb">
 								<h3><%%=blurb%></h3>
-								<h5>Time To Read:<%%=read_time%></h5>
+								<%% if(typeof read_time === 'undefined'){}else{%><h5>Time To Read:<%%=read_time%><%%}%></h5>
 							</div>
 						</figcaption>
 					</div>
@@ -30,7 +30,6 @@
 			</div>
 		</div>
 	</script>
-
 	<title>Timehack</title>
 
 	

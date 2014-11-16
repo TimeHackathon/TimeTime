@@ -99,8 +99,18 @@ $(function(){
 		category = text.split(' ')[0].toLowerCase();
 
 		$.get('/articles?count=' + counter  + '&category=' + category).done(function(response){
-		articleView = new ArticleView({model:response})
+			articleView = new ArticleView({model:response})
+		});
 	});
+
+	$('.stats').on('click', function(){
+		$.get('/stats').done(function(data){
+			$('.container').empty();
+			$('.container').append('<h3 class="stat">Likes</h3><canvas id="myChart" width="400" height="400"></canvas>');
+			var ctx = $('#myChart').get(0).getContext('2d');
+			var myDoughnutChart = new Chart(ctx).Doughnut(data.data, { segmentShowStroke: true, segmentStrokeColor: '#fff', segmentStrokeWidth: 2, percentageInnerCutout: 50, animationSteps: 100, animationEasing: 'easeOutBounce', animateRotate: true})
+			
+		})
 	})
 })
 

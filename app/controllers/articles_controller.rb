@@ -103,6 +103,43 @@ class ArticlesController < ApplicationController
 			render json: articles
 		end
 
+		def stats
+			data = {time_read:0,data:[]}
+			likes = Like.where(liked:true).select(:article_id)
+
+			articles = Article.where(id:likes).where('category = ? OR category= ? OR category =?', "Arts&Leisure", "Culture", "Society")
+			data[:data].push({label:'Art', color:'#000',highlight:'#AF2C29', value:articles.length})
+
+			articles = Article.where(id:likes).where(category:'Styles')
+			data[:data].push({label:'Style', color:'#222', highlight:'#AF2C29',value:articles.length})
+	
+			articles = Article.where(id:likes).where(category:'Sports')
+			data[:data].push({label:'Sports',color:'#333', highlight:'#AF2C29',value:articles.length})
+	
+
+			articles = Article.where(id:likes).where('category = ? OR category= ? OR category =?', "Editorial", "OpEd", "Letters")
+			data[:data].push({label:'Opinion',color:'#444',highlight:'#AF2C29', value:articles.length})
+
+			articles = Article.where(id:likes).where('category = ? OR category= ? OR category =?', "Foreign", "National", "Metro")
+			data[:data].push({label:'News',color:'#555',highlight:'#AF2C29', value:articles.length})
+
+			articles = Article.where(id:likes).where('category = ? OR category= ?', "SundayBusiness", "Business")
+			data[:data].push({label:'Business', color: '#666', highlight:'#AF2C29', value:articles.length})
+
+			total_time_read = 0
+			read = Like.where(read:true).select(:article_id)
+			read_articles = Article.where(id:read)
+			read_articles.each do |article|
+
+				data[:time_read] = total_time_read+article.read_time.to_i
+			end
+			puts total_time_read
+	
+	
+			render json: data
+
+		end
+
 
 
 	end

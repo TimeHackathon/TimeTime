@@ -30,7 +30,12 @@
  	color: black;
  }
 
- .headline > h1 {
+.stat {
+	color: rgba(194,36,37,1);
+	font-family: 'Oswald', sans-serif;
+}
+
+.headline > h1 {
  	color: rgba(194,36,37,1);
  	font-family: 'Oswald', sans-serif;
  }
