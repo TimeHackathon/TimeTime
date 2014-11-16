@@ -9,7 +9,9 @@ class ArticlesController < ApplicationController
 
 			likes = Like.all.select(:article_id)
 			articles = Article.where.not(id:likes).first
-			if(params[:count] % 5 == 0)
+			puts params[:count]
+			if(params[:count].to_i % 5 == 0)
+				puts 'hello'
 				articles = Ad.all.sample
 			end
 
