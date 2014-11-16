@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 		elsif(params[:read])
 			read = Like.where(read:true).select(:article_id)
 			articles = Article.where(id:read)
-		
+
 
 		else
 			likes = Like.all.select(:article_id)
@@ -69,8 +69,9 @@ class ArticlesController < ApplicationController
 
 				articles.flatten!
 
-
+				puts articles.length
 				articles = articles[0]
+
 
 				puts params[:count]
 				if(params[:count].to_i % 5 == 0)
@@ -80,11 +81,31 @@ class ArticlesController < ApplicationController
 
 
 			end
+			def graphs
+				read = Like.where(read:true).select(:article_id)
+				articles = Article.where(id:read)
+				minutes_read = 0
+				articles.each do |article|
+					length = article.content.split(' ')
+					length = length.length
+					length = length/250.to_f
+					minutes_read += length
+					puts length
+				end
+				puts minutes_read
+			end
 
-			render json: articles
+
 		end
 
+
+
+		render json: articles
 	end
+
+
+
+end
 
 
 
