@@ -16,9 +16,10 @@ class ArticlesController < ApplicationController
 			render json: articles
 
 		end
-
-
 	end
+
+
+end
 
 
 
