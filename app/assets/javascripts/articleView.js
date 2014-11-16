@@ -15,6 +15,9 @@ var ArticleView = Backbone.View.extend({
 		$('.container').empty()
 		this.$el.html(this.template(this.model));
 		$('.container').append(this.$el);
+		setTimeout(function(){
+			$('figure').addClass('cs-hover')
+		},1000)
 	},
 
 	events: {
