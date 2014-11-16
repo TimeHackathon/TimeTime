@@ -6,6 +6,7 @@ class LikesController < ApplicationController
 	end
 	
 	def update
+		puts 'working'
 		like = Like.find_by(article_id: params[:article_id])
 		like.read = true
 		like.save

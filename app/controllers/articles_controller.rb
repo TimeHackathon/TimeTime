@@ -131,7 +131,7 @@ class ArticlesController < ApplicationController
 			read_articles = Article.where(id:read)
 			read_articles.each do |article|
 
-				data[:time_read] = total_time_read+article.read_time.to_i
+				data[:time_read] = data[:time_read]+article.read_time.to_i
 			end
 			puts total_time_read
 	
