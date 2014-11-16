@@ -21,6 +21,9 @@
  @import url(http://fonts.googleapis.com/css?family=Oswald);
  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 
+.fa {
+	padding-left: 30px
+}
  .home {
 	cursor: pointer;
 }
