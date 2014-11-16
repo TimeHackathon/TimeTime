@@ -29,7 +29,6 @@
 	opacity: 0.5;
 }
 
-<<<<<<< HEAD
 li.liked-thumbnail {
 	max-width: 220px;
 	max-height: 250px;
@@ -71,13 +70,6 @@ nav > ul > li {
 }
 
 
-@import url(http://fonts.googleapis.com/css?family=Raleway);
- @import url(http://fonts.googleapis.com/css?family=Abel);
- @import url(http://fonts.googleapis.com/css?family=Oswald);
- @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-
-=======
->>>>>>> 63a6400d0c0c854f86cc306b4cecea1b1a2b676b
  .content {
  	font-family: franklin-gothic-urw,sans-serif; 
  	text-shadow: none;
@@ -100,33 +92,6 @@ nav > ul > li {
  p {
  	font-family: franklin-gothic-urw,sans-serif;
  	font-size: 20px;
- }
- .close {
- 	color: black;
- }
-
- ul.liked-article {
- 	padding-bottom: 30px;
- 	padding-top: 30px;
- }
- ul.liked-article > li {
- 	padding-top: 10px;
- }
- ul.liked-article > li > h1 {
- 	text-align: center;
- 	color: rgba(194,36,37,1);
- 	font-family: 'Oswald', sans-serif;
- }
-
- li.liked-article {
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-size: 20px
- }
-
- nav > ul > li {
- 	font-size: 18px;
- 	font-family: franklin-gothic-urw,sans-serif;
- 	font-style: none;
  }
 
  .grid {
