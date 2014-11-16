@@ -32,7 +32,7 @@
 
  .headline > h1 {
  	color: rgba(194,36,37,1);
- 	font-family: 'Raleway', sans-serif;
+font-family: 'Oswald', sans-serif;
  }
 
  p {
@@ -52,10 +52,12 @@ font-family: franklin-gothic-urw,sans-serif;
  }
  ul.liked-article > li > h1 {
  	text-align: center;
+ 	color: rgba(194,36,37,1);
+font-family: 'Oswald', sans-serif;
  }
 
  li.liked-article {
- 	font-family: 'Raleway', sans-serif;
+font-family: franklin-gothic-urw,sans-serif;
  	font-size: 20px
  }
 
