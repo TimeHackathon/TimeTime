@@ -5,7 +5,7 @@ var ArticleView = Backbone.View.extend({
 
 	initialize: function(){
 		this.render();
-		this.counter = 0
+
 	},
 
 	render: function(){
@@ -21,7 +21,8 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	like: function(){
-		this.counter = this.counter + 1
+		this.counter += 1
+
 		if(this.model.ad){
 			console.log('hey')
 			$.get('/articles?count='+this.counter).done(function(response){
@@ -30,7 +31,7 @@ var ArticleView = Backbone.View.extend({
 		}
 		else{
 
-					this.counter = this.counter + 1
+					this.counter += 1
 			$.post('/likes', {liked:true,article_id:this.model.id}).done(function(){
 				$.get('/articles?count='+this.counter).done(function(response){
 					var articleView = new ArticleView({model:response});
