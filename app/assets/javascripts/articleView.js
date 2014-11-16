@@ -19,7 +19,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	like: function(){
-		if(model.ad){
+		if(this.model.ad){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
@@ -36,7 +36,7 @@ var ArticleView = Backbone.View.extend({
 	},
 
 	dislike: function(){
-		if(model.ad){
+		if(this.model.ad){
 			$.get('/articles').done(function(response){
 				var articleView = new ArticleView({model:response});
 			})
