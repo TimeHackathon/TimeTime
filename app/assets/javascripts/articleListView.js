@@ -5,7 +5,7 @@ var ArticleListView = Backbone.View.extend({
 	initialize: function(options){
 		this.listenTo(this.collection, 'add', this.addToList);
 		if (options.liked){
-			this.collection.fetch({liked: true});
+			this.collection.fetch({data:{liked: true}})
 			console.log(this.collection)
 		} else {
 			this.collection.fetch();
@@ -14,7 +14,8 @@ var ArticleListView = Backbone.View.extend({
 	},
 
 	addToList: function(article){
-		this.$el.append('<li class="liked-article">' + article.headline + '</li>');
+
+		this.$el.append('<li class="liked-article">' + article.attributes.headline + '</li>');
 	},
 
 	render: function(){
