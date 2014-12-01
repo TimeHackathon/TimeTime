@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
 
 		if(params[:category])
 			puts params
-			likes = Like.all.select(:article_id)
+			
+			
 			if(params[:category]=='art')
 				articles = Article.where.not(id:likes).where('category = ? OR category= ? OR category =?', "Arts&Leisure", "Culture", "Society").first
 			elsif(params[:category]=='style')

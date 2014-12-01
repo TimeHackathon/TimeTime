@@ -17,13 +17,18 @@
 								<%% if(typeof read_time === 'undefined'){}else{%><h5 style = "color:black;">Time To Read:<br><%%=read_time%><%%}%></h5>
 							</div>
 							</div>
+		<div class="row">
+		<div class="col-md-1"><i class="fa fa-thumbs-down fa-5x chevron hidden-sm hidden-xs"></i></div>
+		<div class="col-md-10">
 		<ul class="grid cs-style-4 hidden-xs hidden-sm">
+		<li>
 			<li>
 				<figure>
 					<div class="firstView">
 						<div class="image col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+	
 							<img class = "image" src=<%%= image %>>
+
 						</div>
 						<figcaption> 
 							<div class="blurb">
@@ -35,6 +40,9 @@
 				</figure>
 			</li>
 		</ul>
+		</div>
+		<div class="col-md-1"><i class="fa fa-5x fa-thumbs-up hidden-xs hidden-sm chevron"></i></div>
+		</div>
 
 		<div class="articleView">
 			<div class="content col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
@@ -70,6 +78,13 @@
 	<%= render template: "shared/navbar" %>
 	<div class="container-fluid">
 		<%= yield %>
+
+
+
+
+
+
+
 		<script src="assets/toucheffects.js"></script>
 	</body>
 </div>

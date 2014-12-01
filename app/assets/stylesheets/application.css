@@ -9,6 +9,10 @@
  .home {
 	cursor: pointer;
 }
+.chevron{
+	margin-top:100%;
+	cursor:pointer;
+}
 
 .home:hover {
 	opacity: 0.5;
